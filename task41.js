@@ -8,14 +8,16 @@ const phones = [
     { model: "PhoneE", brand: "Iphone", price: 105000 },
     { model: "PhoneF", brand: "HTC", price: 48000 },
 ];
-function findAveragePhonePrice(input){ console.log(phones.length)
-    if (phones.length===0){return 0;}
 
-    let totalPrice = 0;
-    for(const phone of phones){
-        //  console.log(phone.price)
-        totalPrice +=phone.price;
-    } return totalPrice/phones.length
+function findAveragePhonePrice(input){
+    if(phones.length === 0){return 0}
+     let totalPrice = 0;
+    for(let i=0; i<phones.length;i++){ 
+        // console.log(i)
+        totalPrice += phones[i].price;
+    }
+    return totalPrice/phones.length
+
 }
-const average = findAveragePhonePrice(phones);
-console.log(average.toFixed(2)) 
+const avgPrice = findAveragePhonePrice(phones);
+console.log(avgPrice)
